@@ -18,7 +18,7 @@ body {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Archivo Narrow", sans-serif;
   background: #ffffff;
   color: var(--text);
 }
@@ -79,20 +79,16 @@ a {
   font-weight: 500;
 }
 
-.hero-link {
-  display: inline-block;
-  position: relative;
-  transition: opacity 180ms ease, transform 180ms ease;
+.desktop-break {
+  display: block;
 }
 
-.hero-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.07em;
-  height: 0.09em;
-  background: currentColor;
+.hero-link {
+  text-decoration: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.07em;
+  text-decoration-skip-ink: none;
+  transition: opacity 180ms ease, transform 180ms ease;
 }
 
 .hero-link:hover {
@@ -101,7 +97,7 @@ a {
 }
 
 .site-footer {
-  grid-template-columns: 0.7fr 1.8fr 1fr 0.8fr 1fr 0.4fr;
+  grid-template-columns: 0.7fr 1.8fr 0.9fr 0.9fr 1fr;
   align-items: end;
 }
 
@@ -111,13 +107,10 @@ a {
   gap: 0.35rem;
 }
 
-.footer-block:last-child {
-  align-items: flex-end;
-}
-
 .footer-block:nth-child(5) {
   text-decoration: underline;
   text-underline-offset: 0.12em;
+  align-items: flex-end;
 }
 
 .back-link {
@@ -390,6 +383,10 @@ a {
   .hero-copy {
     max-width: none;
     font-size: clamp(3.2rem, 16vw, 5rem);
+  }
+
+  .desktop-break {
+    display: none;
   }
 
   .project-grid,
